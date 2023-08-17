@@ -23,5 +23,5 @@ const apiSchema = Mongoose.Schema(
 
 endpointSchema.index({"endpointPath":1});
 
-export const UserModel= Mongoose.model("User",apiSchema);
+export const ApiModel= Mongoose.model("Details",apiSchema);
 export const EndPointModel = Mongoose.model("Endpoints",endpointSchema);

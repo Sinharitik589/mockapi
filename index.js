@@ -1,8 +1,10 @@
 import  Express  from "express";
 import cors from "cors";
-import apiRoute from "./controllers/apiController"
+import apiRoute from "./backend/controllers/apiController";
+import statusRoute from "./backend/controllers/statsController";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import path from 'path';
 const app = Express();
 dotenv.config()
 app.use(cors());
@@ -10,10 +12,10 @@ app.use(Express.json());
 
 
 app.use("/api",apiRoute);
-
-
+app.use("/stats",statusRoute);
+app.use("/assets",Express.static(path.join(__dirname,'dist','assets')));
 app.get("*",(req,res) => {
-    return res.status(200).send("Working");
+    return res.sendFile(path.join(__dirname,'dist','index.html'));
 })
 
 const connectToDB = async () => {
