@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    margin: 0;
+    padding: 0;
+}
+.rocket-mov{
+    transition: transform 5s;
+    transform: translateX(calc(70vw));
+}
+.rocket2-mov{
+    transition-property: transform;
+    transition-duration: 4s;
+    transition-delay: 4s;
+    transform: translateX(calc(-70vw));
+}
+.bg-gray-main{
+    background-color: white;
+}
+.text-or{
+    color: #FF7426;
+}
+.vh-nav{
+    height: calc(100vh - 64px);
+}

@@ -1,32 +1,23 @@
-import { useCallback, useEffect, useState } from 'preact/hooks'
-import './app.css'
-import { axios } from './utils/utils';
+import { useEffect, useState } from "preact/hooks";
+import Anim from "./components/Anim.jsx";
+import "./index.css"
+import Nav from "./components/Nav.jsx";
+import Home from "./pages/Home.jsx";
+import Router from "preact-router";
+import Dashboard from "./pages/Dashboard.jsx";
 
-
-export function App() {
-  const [enpoints,setEndpoints] = useState([])
-  
-  const fetchEndpoints = useCallback(async () => {
-    try{
-        const res = await axios.get("/stats?usid=64cca4abde209703e80b1ed7");
-        setEndpoints(res.data.user.endpoints);
-    }
-    catch(e){
-
-    }
-  },[]);
-
-  useEffect(() => {
-    fetchEndpoints();
-  },[fetchEndpoints])
+export default function App() {
 
   return (
     <>
-      <ol>
-        {
-            enpoints.map(val=><li>{val}</li>)
-        }
-      </ol>
+      <Nav/>
+      <div className="container bg-gray-main overflow-x-hidden">
+        <Router>
+        <Home path="/" />
+        <Dashboard path="/dash" />
+        </Router>
+      </div>
+    
     </>
   )
 }
