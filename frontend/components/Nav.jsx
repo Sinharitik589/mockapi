@@ -9,11 +9,11 @@ export default function Nav() {
             Home
         </Link>
         <Link class="text-xl font-semibold text-gray-400 mr-2" activeClassName="text-gray-500" href="/dash">
-            Foo
+            Dashboard
         </Link>
         </div>
         <div>
-        <Button text={"Login"} classList={"py-1"} />
+        {/* <Button text={"Login"} classList={"py-1"} /> */}
         </div>
     </nav>
   )

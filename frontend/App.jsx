@@ -11,7 +11,7 @@ export default function App() {
   return (
     <>
       <Nav/>
-      <div className="container bg-gray-main overflow-x-hidden">
+      <div className="container bg-gray-main mx-auto overflow-x-hidden">
         <Router>
         <Home path="/" />
         <Dashboard path="/dash" />

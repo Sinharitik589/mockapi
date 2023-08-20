@@ -25,3 +25,9 @@ body{
 .vh-nav{
     height: calc(100vh - 64px);
 }
+.dash-h{
+    height: calc(100% - 48px);
+}
+.border-1{
+    border-width: 1px;
+}
