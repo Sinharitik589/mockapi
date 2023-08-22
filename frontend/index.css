@@ -31,3 +31,21 @@ body{
 .border-1{
     border-width: 1px;
 }
+.border-b-1{
+    border-bottom-width: 1px;
+}
+
+
+@media (min-width: 1536px)
+{
+    .rocket-mov{
+        transition: transform 5s;
+        transform: translateX(calc(.7 * 1536px));
+    }
+    .rocket2-mov{
+        transition-property: transform;
+        transition-duration: 4s;
+        transition-delay: 4s;
+        transform: translateX(calc(-1 * .7 * 1536px));
+    }
+}

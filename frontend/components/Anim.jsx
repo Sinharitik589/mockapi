@@ -51,8 +51,8 @@ import back from "../assets/back.svg";
 
   return (
     <>
-    <div className='grid grid-cols-12 w-screen  h-24'>
-          <div className="col-span-3 h-full relative flex flex-col justify-center">
+    <div className='grid grid-cols-12 w-full  h-24'>
+          <div className="col-span-3 h-full w-full relative flex flex-col justify-center">
               <img src={getrocket} className={`${rocketCl} h-7 mb-2`} />
               <img src={postrocket} className={`${rocketCl3} h-7`} />
               <div className="w-full absolute h-full  bg-gray-main flex justify-end z-10">
