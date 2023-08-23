@@ -49,3 +49,6 @@ body{
         transform: translateX(calc(-1 * .7 * 1536px));
     }
 }
+.model{
+    background: rgb(0, 0, 0,0.4);
+}
