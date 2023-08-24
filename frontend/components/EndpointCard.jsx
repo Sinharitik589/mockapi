@@ -1,21 +1,29 @@
 import { useStore } from "../context/StoreContext";
+import {useState} from "preact/hooks"
+import { copyToClip } from "../utils/utils";
 import Button from "./Button";
 
 
 export default function EndpointCard({url="",endp=""}) {
 
   const {userId,setCurrentEndpoint,setModalVisible,currentEndpoint} = useStore();
+  const [copyText,setCopyText] = useState()
 
   const addData = () => {
     setCurrentEndpoint(endp);
     setModalVisible(true);
   }
 
+  const copyUrl = () => {
+    let urlVal = `https://instapi.sinha.website/api/${userId}/${endp}`;
+    copyToClip(urlVal);
+  }
+
   return (
     <div className="w-full rounded-md h-40 border-2 px-2 py-1 flex flex-col justify-between">
         <div>
         <div className="w-full text-right">
-            <Button text="Copy Endpoint" classList="text-xs font-light py-1 px-1"  />
+            <Button onClick={copyUrl} text="Copy Endpoint" classList="text-xs font-light py-1 px-1"  />
         </div>
         <h2 className="text-2xl text-gray-500 break-words">{endp}</h2>
         <h6 className="text-sm text-gray-400 break-words">{url}</h6>

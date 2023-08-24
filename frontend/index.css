@@ -35,6 +35,16 @@ body{
     border-bottom-width: 1px;
 }
 
+/* @media (max-width:700px){
+    .main-cont{
+        display: none;
+    }
+}
+@media(min-width:700px){
+    .main-cont{
+        display: block;
+    }
+} */
 
 @media (min-width: 1536px)
 {
@@ -47,6 +57,27 @@ body{
         transition-duration: 4s;
         transition-delay: 4s;
         transform: translateX(calc(-1 * .7 * 1536px));
+    }
+}
+@media(max-width:700px){
+    .rocket-mov{
+        transition: transform 5s;
+        transform: translateX(calc(100vw));
+    }
+    .rocket2-mov{
+        transition-property: transform;
+        transition-duration: 4s;
+        transition-delay: 4s;
+        transform: translateX(calc(-100vw));
+    }
+   
+}
+@media(max-width:1024px){
+    .dash-h{
+        height: fit-content;
+    }
+    .vh-nav{
+        height: fit-content;
     }
 }
 .model{

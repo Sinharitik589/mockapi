@@ -5,7 +5,7 @@ export default function RequestCard({title="",description="",url="",isNeeded=fal
     <div className="w-full h-72 shadow-md rounded-lg border-2 border-gray-300 p-3 text-center flex flex-col justify-between">
        
         <div>
-        <h3 className="text-2xl mb-1 font-bold text-gray-500">{title}</h3>
+        <h3 className="mb-1 font-bold text-gray-500 md:text-lg lg:text-xl">{title}</h3>
         <div className=" text-gray-400 text-sm font-semibold break-words" >
             {url}
         </div>

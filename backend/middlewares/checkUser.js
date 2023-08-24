@@ -1,6 +1,7 @@
 import { ApiModel } from "../model/apiModel";
 
 export default async function (req,res,next) {
+   try{
     const {id,endpoint} = req.params;
     let user = await ApiModel.findById(id);
     if(!user) {
@@ -14,4 +15,8 @@ export default async function (req,res,next) {
         await user.save();
     }
     next();
+   }
+   catch(e){
+    console.log({e});
+   }
 }

@@ -1,24 +1,16 @@
 import { useCallback, useEffect, useState } from "preact/hooks";
-import Anim from "./components/Anim.jsx";
 import "./index.css"
 import Nav from "./components/Nav.jsx";
 import Home from "./pages/Home.jsx";
 import Router from "preact-router";
 import Dashboard from "./pages/Dashboard.jsx";
 import Footer from "./components/Footer.jsx";
-import { StoreProvider, useStore } from "./context/StoreContext.js";
+import {  useStore } from "./context/StoreContext.jsx";
 import { axios } from "./utils/utils.js";
 
 export default function App() {
 
   const {setUserId} = useStore();
-
-  // const generateRand = useCallback((length) =>{
-  //   let parentString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-  //   let res = "";
-  //   for(let x=0;x<length;x++) res+=parentString[parseInt(Math.random()*60)];
-  //   return res;
-  // },[])
 
   const manageUid = async () => {
     let userId = localStorage.getItem("userid")
@@ -37,13 +29,13 @@ export default function App() {
   return (
     <>
        <Nav/>
-      <div className="container bg-gray-main mx-auto">
+      <div className="container bg-gray-main mx-auto main-cont sm:p-3">
         <Router>
         <Home path="/" />
-        <Dashboard path="/dash" />
+        <Dashboard path="/dash/:type?" />
         </Router>
-        <Footer/>
       </div>
+      <Footer/>
     </>
   )
 }

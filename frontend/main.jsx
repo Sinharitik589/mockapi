@@ -1,5 +1,5 @@
 import { render } from 'preact'
 import App from './App.jsx'
-import { StoreProvider } from './context/StoreContext.js'
+import { StoreProvider } from './context/StoreContext.jsx'
 
-render(<StoreProvider><App /></StoreProvider>, document.getElementById('app'))
+render(<div><StoreProvider><App /></StoreProvider></div>, document.getElementById('app'))

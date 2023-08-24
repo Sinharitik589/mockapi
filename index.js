@@ -8,7 +8,11 @@ import path from 'path';
 const app = Express();
 dotenv.config()
 app.use(cors());
-app.use(Express.json());
+app.use(Express.json(
+    {
+        limit:"10kb"
+    }
+));
 
 
 app.use("/api",apiRoute);
@@ -21,7 +25,7 @@ app.get("*",(req,res) => {
 const connectToDB = async () => {
     try{
         console.log({val:process.env.MONGO_URI})
-        await mongoose.connect(`${process.env.MONGO_URI}/mockapi`);
+        await mongoose.connect(`${process.env.MONGO_URI}`);
         console.log("Connected to db");
     }
     catch(e){
@@ -31,6 +35,6 @@ const connectToDB = async () => {
 
 connectToDB()
 
-app.listen(5000,() => {
-    console.log("App running on localhost:5000")
+app.listen(process.env.PORT,() => {
+    console.log("App running on "+process.env.PORT)
 })

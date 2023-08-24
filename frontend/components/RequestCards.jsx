@@ -7,21 +7,21 @@ export default function RequestCards() {
   const {userId} = useStore()
 
   return (
-    <section className="w-9/12 mt-12 flex mx-auto p-3 flex-wrap justify-center">
-    <div className="w-1/3 p-2">
+    <section className="md:w-9/12 mt-12 md:flex md:mx-auto p-3 md:flex-wrap md:justify-center">
+    <div className=" lg:w-1/3 p-2 md:w-1/2">
       <RequestCard 
       title="POST(CREATING AN ENTITY)"
       url={`https://instapi.sinha.website/api/${userId}/{endpoint}`}
        description="Creating a new entity for a particular endpoint , needs JSON payload"/>
     </div>
-    <div className="w-1/3 p-2">
+    <div className="sm:w-full lg:w-1/3 p-2 md:w-1/2">
       <RequestCard
       title="GET(GETTING ALL ENTITIES)"
       url={`https://instapi.sinha.website/api/${userId}/{endpoint}`}
       description="Getting all entities for a particular endpoint"
       />
     </div>
-    <div className="w-1/3 p-2">
+    <div className="sm:w-full lg:w-1/3 p-2 md:w-1/2">
       <RequestCard
       title="GET(GETTING A PARTICULAR ENTITY)"
       url={`https://instapi.sinha.website/api/${userId}/{endpoint}/{_id}`}
@@ -29,7 +29,7 @@ export default function RequestCards() {
       isNeeded
       />
     </div>
-    <div className="w-1/3 p-2">
+    <div className="sm:w-full lg:w-1/3 p-2 md:w-1/2">
       <RequestCard 
       title="PUT(UPDATING A PARTICULAR ENTITY)"
       url={`https://instapi.sinha.website/api/${userId}/{endpoint}/{_id}`}
@@ -37,7 +37,7 @@ export default function RequestCards() {
       isNeeded
       />
     </div>
-    <div className="w-1/3 p-2">
+    <div className="sm:w-full lg:w-1/3 p-2 md:w-1/2">
       <RequestCard
       title="DELETE(DELETING A PARTICULAR ENTITY)"
       url={`https://instapi.sinha.website/api/${userId}/{endpoint}/{_id}`}

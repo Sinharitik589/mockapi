@@ -11,8 +11,8 @@ export default function EndpointUrl({url=""}) {
   }
 
   return (
-    <div className="h-12 rounded-md border-2 border-gray-400 flex justify-between w-full py-1 px-2 ">
-        <div className="text-xl leading-none text-gray-400 flex items-center font-semibold">{url}<span className="text-gray-500">{userId}</span></div>
+    <div className="h-12 rounded-md border-2 border-gray-400 lg:flex justify-between w-full py-1 px-2 ">
+        <div className="text-xl leading-none text-gray-400 lg:flex items-center font-semibold sm:break-words">{url}<span className="text-gray-500">{userId}</span></div>
         <div className="flex items-center"><Button onClick={copyUrl}  text="Copy Root Url" classList="px-1 py-1"/></div>
     </div>
   )

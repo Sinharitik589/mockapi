@@ -12,10 +12,11 @@ export const StoreProvider = ({children}) => {
     const setCurrentEndpoint = (val) =>{
         setCurrent(val);
     }
+    let StoreProvider = Store.Provider;
 
-    return <Store.Provider value={{userId,setUserId,modalVisible,setModalVisible,setCurrentEndpoint,currentEndpoint}}>
+    return <StoreProvider value={{userId,setUserId,modalVisible,setModalVisible,setCurrentEndpoint,currentEndpoint}}>
         {children}
-    </Store.Provider>
+    </StoreProvider>
 }
 
 export const useStore = () => useContext(Store);

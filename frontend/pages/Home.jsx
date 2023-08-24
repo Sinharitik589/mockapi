@@ -7,6 +7,7 @@ import Landing from "../components/Landing";
 import About from "../components/About";
 import HowToUse from "../components/HowToUse";
 import RequestCards from "../components/RequestCards";
+import Disclaimer from "../components/Disclaimer";
 
 export default function Home() {
   console.log("rendered")
@@ -19,6 +20,7 @@ export default function Home() {
         <About/>
         <HowToUse/>
         <RequestCards/>
+        <Disclaimer/>
     </main>
   )
 }
