@@ -27,15 +27,15 @@ export default function App() {
   },[])
 
   return (
-    <>
+    <div className="main-cont">
        <Nav/>
-      <div className="container bg-gray-main mx-auto main-cont sm:p-3">
+      <div className="container bg-gray-main mx-auto sm:p-3">
         <Router>
         <Home path="/" />
         <Dashboard path="/dash/:type?" />
         </Router>
       </div>
       <Footer/>
-    </>
+    </div>
   )
 }

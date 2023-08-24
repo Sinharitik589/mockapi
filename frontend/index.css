@@ -35,7 +35,7 @@ body{
     border-bottom-width: 1px;
 }
 
-/* @media (max-width:700px){
+@media (max-width:700px){
     .main-cont{
         display: none;
     }
@@ -44,7 +44,7 @@ body{
     .main-cont{
         display: block;
     }
-} */
+}
 
 @media (min-width: 1536px)
 {
@@ -60,6 +60,7 @@ body{
     }
 }
 @media(max-width:700px){
+    
     .rocket-mov{
         transition: transform 5s;
         transform: translateX(calc(100vw));
