@@ -18,6 +18,7 @@ app.use(Express.json(
 app.use("/api",apiRoute);
 app.use("/stats",statusRoute);
 app.use("/assets",Express.static(path.join(__dirname,'dist','assets')));
+app.use("/.well-known",Express.static(path.join(__dirname,'.well-known')));
 app.get("*",(req,res) => {
     return res.sendFile(path.join(__dirname,'dist','index.html'));
 })
