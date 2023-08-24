@@ -27,15 +27,19 @@ export default function App() {
   },[])
 
   return (
+    <>
+    <div className="text-4xl text-gray-500 ph-cont vh-100 vw-100 text-center">Please open in desktop</div>
     <div className="main-cont">
-       <Nav/>
-      <div className="container bg-gray-main mx-auto sm:p-3">
-        <Router>
-        <Home path="/" />
-        <Dashboard path="/dash/:type?" />
-        </Router>
-      </div>
-      <Footer/>
-    </div>
+        
+        <Nav/>
+       <div className="container bg-gray-main mx-auto sm:p-3">
+         <Router>
+         <Home path="/" />
+         <Dashboard path="/dash/:type?" />
+         </Router>
+       </div>
+       <Footer/>
+     </div>
+    </>
   )
 }

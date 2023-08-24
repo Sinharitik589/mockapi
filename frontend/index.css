@@ -35,14 +35,20 @@ body{
     border-bottom-width: 1px;
 }
 
-@media (max-width:700px){
+@media (max-width:800px){
     .main-cont{
         display: none;
     }
+    .ph-cont{
+        display: block;
+    }
 }
-@media(min-width:700px){
+@media(min-width:800px){
     .main-cont{
         display: block;
+    }
+    .ph-cont{
+        display: none;
     }
 }
 
@@ -63,13 +69,13 @@ body{
     
     .rocket-mov{
         transition: transform 5s;
-        transform: translateX(calc(100vw));
+        transform: translateX(calc(60vw));
     }
     .rocket2-mov{
         transition-property: transform;
         transition-duration: 4s;
         transition-delay: 4s;
-        transform: translateX(calc(-100vw));
+        transform: translateX(calc(-60vw));
     }
    
 }
