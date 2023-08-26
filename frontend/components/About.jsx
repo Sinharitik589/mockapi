@@ -5,7 +5,7 @@ export default function About() {
           <div className="h-16  w-full flex items-center justify-center text-gray-500 ">
             <h2 className="text-3xl font-semibold leading-none">What is INSTAPI</h2>
           </div>
-          <p className=" text-gray-400   w-full p-4 pt-0">
+          <p className=" text-gray-500   w-full p-4 pt-0">
             Instapi is a platform that enables developers to build there full stack solution without the need to code a 
             full fledged backend and get up and running in no time. You can create API endpoints through Instapi platform and can leverage 
             the GET , POST , PUT AND DELETE http requests for communication with the backend . It saves you from the tidious task of creating

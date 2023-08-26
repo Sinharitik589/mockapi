@@ -52,30 +52,30 @@ import back from "../assets/back.svg";
   return (
     <>
     <div className='grid grid-cols-12 w-full  h-24 '>
-          <div className="col-span-3 h-full w-full relative flex flex-col justify-center">
-              <img src={getrocket} className={`${rocketCl} h-7 mb-2`} />
-              <img src={postrocket} className={`${rocketCl3} h-7`} />
+          <div className="md:col-span-3 col-span-4 h-full w-full relative flex flex-col justify-center">
+              <img src={getrocket} className={`${rocketCl} md:h-7 h-4 mb-2`} />
+              <img src={postrocket} className={`${rocketCl3} md:h-7 h-4`} />
               <div className="w-full absolute h-full  bg-gray-main flex justify-end z-10">
                   <div className="w-max flex flex-col items-center">
-                      <div className="h-5/6 ">
+                      <div className="md:h-5/6 h-4/6 ">
                           <img className='h-full' src={front}/>
                       </div>
-                      <div className="h-1/6 w-full text-gray-400 flex justify-center items-center font-semibold">
+                      <div className="md:h-5/6 h-2/6 w-full text-gray-400 flex justify-center items-center md:font-semibold sm:font-normal">
                         <span className="leading-none text-base">Your Application</span>  
                       </div>
                   </div>
               </div>
           </div>
-          <div className="col-span-6" />
-          <div className="col-span-3 h-full relative flex flex-col justify-center">
-            <img src={resrocket} className={`${rocketCl2} h-7 mb-2`} />
-            <img src={resrocket} className={`${rocketCl4} h-7`} />
+          <div className="md:col-span-6 col-span-4" />
+          <div className="md:col-span-3 col-span-4 h-full relative flex flex-col justify-center">
+            <img src={resrocket} className={`${rocketCl2} md:h-7 h-4 mb-2`} />
+            <img src={resrocket} className={`${rocketCl4} md:h-7 h-4`} />
             <div className="w-full absolute h-full  bg-gray-main flex justify-start ">
                  <div className="w-max flex flex-col items-center">
-                      <div className="h-5/6">
+                      <div className="md:h-5/6 h-4/6">
                           <img className='h-full' src={back}/>
                       </div>
-                      <div className="h-1/6 w-full text-gray-400 flex justify-center items-center font-semibold">
+                      <div className="md:h-1/6 h-2/6 w-full text-gray-400 flex justify-center items-center md:font-semibold sm:font-normal">
                         <span className="leading-none text-base">Instapi Server</span>  
                       </div>
                   </div>

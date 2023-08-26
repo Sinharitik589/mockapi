@@ -47,8 +47,8 @@ export default function Model({onClose}) {
 
   return (
     <div className="w-screen h-screen top-0 left-0 vh-100 vw-100 model fixed ">
-        <div className="container h-full flex justify-center items-center">
-            <div className="sm:w-full lg:w-1/2 p-3 bg-white rounded-sm">
+        <div className="container h-full flex justify-center items-center p-3 md:p-0">
+            <div className="w-full md:w-1/2 p-3 bg-white rounded-sm">
             <div className="w-full text-right">
             <Button onClick={() => setModalVisible(false)} text="Close" type="bordered" classList="text-xs font-light py-1 px-1"  />
            </div>

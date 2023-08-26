@@ -8,7 +8,7 @@ export default function HowToUse() {
   const {userId} = useStore()
 
   return (
-    <section className="lg:w-4/6 md:w-full mt-12  mx-auto shadow-md rounded-lg border-2 border-gray-300  text-gray-400    mb-3 p-4">
+    <section className="lg:w-4/6 md:w-full mt-12  mx-auto shadow-md rounded-lg border-2 border-gray-300  text-gray-500    mb-3 p-4">
         <div className="h-16  w-full flex items-center justify-center text-gray-500 ">
         <h2 className="text-3xl font-semibold leading-none">How to use</h2>
         </div>

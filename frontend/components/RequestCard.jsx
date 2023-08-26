@@ -6,7 +6,7 @@ export default function RequestCard({title="",description="",url="",isNeeded=fal
        
         <div>
         <h3 className="mb-1 font-bold text-gray-500 md:text-lg lg:text-xl">{title}</h3>
-        <div className=" text-gray-400 text-sm font-semibold break-words" >
+        <div className=" text-gray-500 text-sm font-semibold break-words" >
             {url}
         </div>
         </div>
@@ -15,11 +15,11 @@ export default function RequestCard({title="",description="",url="",isNeeded=fal
          {description}
         </p>
         <div>
-        <div className="text-sm leading-4 text-gray-400 mb-2">
+        <div className="text-sm leading-4 text-gray-500 mb-2">
           <span className="text-gray-500 mr-1 font-semibold">{"{endpoint}"}</span><span>{"Name of endpoint created"}</span>
         </div>
         {
-          isNeeded&& <div className="text-sm leading-4 text-gray-400">
+          isNeeded&& <div className="text-sm leading-4 text-gray-500">
           <span className="text-gray-500 mr-1 font-semibold">{"{_id}"}</span><span>{"Unique value assigned to every JSON payload"}</span>
         </div>
         }

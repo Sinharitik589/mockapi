@@ -6,12 +6,12 @@ export default function Nav() {
     <nav className="h-16 bg-white border-b-2 border-gray-400 flex items-center justify-between p-2">
         <div className="flex items-center">
         <Link href="/" className="mr-4">
-          <img src={logo} className="h-12 w-auto"/>
+          <img src={logo} className="h-10 md:h-12 w-auto"/>
         </Link>
-        <Link className="text-xl font-semibold text-gray-400 mr-2" activeClassName="text-gray-500" href="/">
+        <Link className="text-lg md:text-xl font-semibold text-gray-400 mr-2" activeClassName="text-gray-500" href="/">
             Home
         </Link>
-        <Link className="text-xl font-semibold text-gray-400 mr-2" activeClassName="text-gray-500" href="/dash">
+        <Link className="text-lg md:text-xl font-semibold text-gray-400 mr-2" activeClassName="text-gray-500" href="/dash">
             Dashboard
         </Link>
         </div>

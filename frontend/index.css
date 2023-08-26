@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&family=Lato&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Forum&display=swap'); */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,6 +7,9 @@
 body{
     margin: 0;
     padding: 0;
+    font-family: 'Forum', cursive;
+    font-family: 'Fuzzy Bubbles', cursive;
+font-family: 'Lato', sans-serif;
 }
 .rocket-mov{
     transition: transform 5s;
@@ -36,20 +41,33 @@ body{
 }
 
 @media (max-width:800px){
-    .main-cont{
+    /* .main-cont{
         display: none;
     }
     .ph-cont{
         display: block;
+    } */
+    .main-cont{
+        overflow-x: hidden;
+    }
+    .rocket-mov{
+        transition: transform 5s;
+        transform: translateX(calc(70vw));
+    }
+    .rocket2-mov{
+        transition-property: transform;
+        transition-duration: 4s;
+        transition-delay: 4s;
+        transform: translateX(calc(-70vw));
     }
 }
 @media(min-width:800px){
-    .main-cont{
+    /* .main-cont{
         display: block;
     }
     .ph-cont{
         display: none;
-    }
+    } */
 }
 
 @media (min-width: 1536px)
@@ -65,7 +83,7 @@ body{
         transform: translateX(calc(-1 * .7 * 1536px));
     }
 }
-@media(max-width:700px){
+/* @media(max-width:700px){
     
     .rocket-mov{
         transition: transform 5s;
@@ -78,13 +96,15 @@ body{
         transform: translateX(calc(-60vw));
     }
    
-}
+} */
 @media(max-width:1024px){
     .dash-h{
         height: fit-content;
+        min-height: 100vh;
     }
     .vh-nav{
         height: fit-content;
+        min-height: 100vh;
     }
 }
 .model{
